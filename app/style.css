@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+:root {
+    --blue-color: rgb(150, 206, 201);
+    --red-color: rgb(168, 51, 1);
+    --navy-color: rgb(19, 4, 65);
+    --green-color: rgb(0, 87, 63);
+    --yellow-color: rgb(209, 175, 38);
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Fredoka One', cursive;
+    background-color: var(--blue-color);
+}
+
+.container {
+    width: 95%;
+}
+
+.title {
+    display: block;
+}
+
+.header {
+    font-family: 'Fredoka One', cursive;
+    font-size: 500%;
+    text-align: center;
+    color: var(--red-color);
+    text-shadow: 5px 5px rgb(85, 25, 0);
+    margin: 0;
+}
+
+.joke-text-container {
+    height: 200px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.joke-text {
+    text-align: center;
+    font-size: 200%;
+    color: var(--green-color);
+    height: 100%;
+}
+
+.joke-button {
+    font-size: 180%;
+    border: 0px;
+    border-radius: 10px;
+    background-color: var(--navy-color);
+    color: rgb(233, 255, 253);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px #193047;
+    transition-duration: 0.3s;
+    font-family: 'Fredoka One', cursive;
+}
+
+.joke-button:hover {
+    background-color: rgb(50, 24, 128);
+}
+
+.joke-button:focus {
+    outline: none;
+}
+
+.button-container {
+    display: block;
+    text-align: center;
+}
+
+.loader {
+    border: 5px solid var(--blue-color);
+    /* Light grey */
+    border-top: 5px solid var(--green-color);
+    /* Blue */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin .3s linear infinite;
+    display: none;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* media queries */
+
+@media screen and (max-width: 700px) {
+    body {
+        min-height: 80vh;
+    }
+
+    .header {
+        font-size: 300%;
+        text-shadow: 3px 3px rgb(85, 25, 0);
+    }
+
+    .joke-text-container {
+        height: 300px;
+    }
+
+    .joke-text {
+        font-size: 140%;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
